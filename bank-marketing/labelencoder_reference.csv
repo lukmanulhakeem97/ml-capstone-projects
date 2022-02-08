@@ -1,0 +1,13 @@
+job,job_code,marital,marital_code,education,education_code,default,default_code,housing,housing_code,loan,loan_code,contact,contact_code,month,month_code,poutcome,poutcome_code
+management,4,married,1.0,tertiary,2.0,no,0.0,yes,1.0,no,0.0,unknown,2.0,may,8,unknown,3.0
+technician,9,single,2.0,secondary,1.0,yes,1.0,no,0.0,yes,1.0,cellular,0.0,jun,6,failure,0.0
+entrepreneur,2,divorced,0.0,unknown,3.0,,,,,,,telephone,1.0,jul,5,other,1.0
+blue-collar,1,,,primary,0.0,,,,,,,,,aug,1,success,2.0
+unknown,11,,,,,,,,,,,,,oct,10,,
+retired,5,,,,,,,,,,,,,nov,9,,
+admin.,0,,,,,,,,,,,,,dec,2,,
+services,7,,,,,,,,,,,,,jan,4,,
+self-employed,6,,,,,,,,,,,,,feb,3,,
+unemployed,10,,,,,,,,,,,,,mar,7,,
+housemaid,3,,,,,,,,,,,,,apr,0,,
+student,8,,,,,,,,,,,,,sep,11,,
