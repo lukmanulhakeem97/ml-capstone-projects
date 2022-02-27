@@ -12,8 +12,12 @@ From cross validation, it has shown XGBClassifier has overall better score in re
 - f1 score: 57%
 - accuracy score: 88%
 ### Files:
--	‘main.ipynb’ is the main notebook file where data modeling  is done.
--	‘s_scaler.pkl’ saves fitted Standard Scaler object classes that later use in ‘testing_svm_mlp_ann.ipynb’ file to scale test data.
--	‘SWEETVIZ_REPORT.html’ shows features univariate analysis by ‘sweetviz’ library.
--	‘testing_svm_mlp_ann.ipynb’ is where testing of computationally intensive models done.
--	‘model_svc.sav’, ‘model_mlp.sav’, and ‘model_annc3.h5’ are saved files of SVM, MLP and ANN models that used to test in ‘testing_svm_mlp_ann.ipynb’ file.
+-	‘main.ipynb’: main notebook file where data modeling  is done.
+-	‘s_scaler.pkl’: used to scale data when using the model externally or during deployment. Fitted on train data using StandardScaler method..
+-	'bank-full.csv': main data set.
+-	‘SWEETVIZ_REPORT.html’: shows features univariate analysis by ‘sweetviz’ library.
+-	'labelencoder_reference.csv': dataframe contains values of categorical features, can be used as a referance to convert new test data during deployment.
+-	'processed_data1.csv': semi preprocessed data.
+-	'train_data.csv': train set split from 'bank-full.csv' for training.
+-	'test_data.csv': test set split from 'bank-full.csv' for final evaluation.
+-	‘xgbc_model.pkl': saved final xgboost model.
