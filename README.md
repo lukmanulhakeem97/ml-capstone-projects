@@ -2,6 +2,7 @@
 My capstone machine Learning projects
 
 ## Project 1: Bank marketing 
+Dataset: 'http://archive.ics.uci.edu/ml/datasets/Bank+Marketing#'.
 ### Project Analysis:
 In this project I tried to build a decision making ML model on a classification problem that can predict or decide whether a bank customer subscribe for term deposit plan or not. For this I am using Portuguese Bank marketing Dataset. It is found that XGBClassifier algorithm is the best model for this problem. Trained model can predict with 65% recall score and 88% of accuracy. I have found that this is best performance metrics scores compared to other available works in internet sources on this dataset.
 ### Workflow:
