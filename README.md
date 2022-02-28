@@ -1,4 +1,4 @@
-# ml-capstone-projects
+# ML-capstone-projects
 My machine Learning capstone projects
 
 ## Project 1: Bank marketing 
