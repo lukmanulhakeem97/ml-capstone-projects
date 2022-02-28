@@ -26,6 +26,7 @@ On testing model has;
 -	'test_data.csv': test set split from 'bank-full.csv' for final evaluation.
 -	‘xgbc_model.pkl': saved final xgboost model.
 
+
 ## Project 2: Handwritten Digits classification
 More on dataset: 'http://yann.lecun.com/exdb/mnist/' 
 ### Project Analysis:
@@ -36,6 +37,17 @@ I used MNIST Handwritten image dataset. It consists of total 70,000 image instan
 For modelling, prepared data in two ways; first for sklearn and ANN algorithms reshaped each input of 28x28 instances into 784 features, and then for CNN reshaped each input into 28x28x1 and each output into one-hot vectors of 1x10 shape.
 
 I tried modelling with both sklearn and deep learning algorithms. Among sklearn algorithms, Support Vector Classifier performed well have accuracy of 97%. In deep learning CNN with two convolutional layer and single Dense ANN layer of 10 units with 0.25 dropout outperform other models, So selected it as final model. It has 99.28%, 98.93% and 99.09% as train, dev and test accuracy respectively.
+
+On test set model has:
+- Accuracy(in percentage)
+   - Train : 99.28%
+   - Validation : 98.93%
+   - Test : 99.09%
+
+- Loss
+   - Train : 0.0205
+   - Validation : 0.0369
+   - Test : 0.0277
 
 ### Files:
 -	‘main.ipynb’ is the main notebook file where modelling done.
