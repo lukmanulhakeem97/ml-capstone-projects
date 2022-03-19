@@ -10,7 +10,7 @@ I have gone through the main steps of ML pipeline. After several analysis, pass 
 
 Cross check results shows XGBClassifier has overall better score in recall, roc_auc and f1. So I chose that algorithm and perform hyperparameter tuning. But hyperparameter tuning shows default hyperparameter have decent recall and f1 scores comparatively, so I choose default XGBoost model for testing. 
 
-On testing model has;
+On testing model has
 - recall score (of 1): 65%
 - precision score (of 1): 51%
 - f1 score: 57%
@@ -27,6 +27,7 @@ On testing model has;
 -	‘xgbc_model.pkl': saved final xgboost model.
 
 
+
 ## Project 2: Handwritten Digits classification
 More on dataset: 'http://yann.lecun.com/exdb/mnist/' 
 ### Project Analysis:
@@ -38,19 +39,33 @@ For modelling, prepared data in two ways; first for sklearn and ANN algorithms r
 
 I tried modelling with both sklearn and deep learning algorithms. Among sklearn algorithms, Support Vector Classifier performed well have accuracy of 97%. In deep learning CNN with two convolutional layer and single Dense ANN layer of 10 units with 0.25 dropout outperform other models, So selected it as final model. It has 99.28%, 98.93% and 99.09% as train, dev and test accuracy respectively.
 
-On test set model has:
-- Accuracy(in percentage)
-   - Train : 99.28%
-   - Validation : 98.93%
-   - Test : 99.09%
-
-- Loss
-   - Train : 0.0205
-   - Validation : 0.0369
-   - Test : 0.0277
-
+On test set model has
+- Accuracy(in percentage):  99.09
+- Loss: 0.0277
 ### Files:
 -	‘main.ipynb’ is the main notebook file where modelling done.
 -	‘model_ann.h5’ saves best trained artificial neural network parameters. 
 -	‘model_cnn.h5’ saves best trained convolutional neural network parameters.
 
+
+
+## Project 3: Flight Price Prediction
+Dataset can be available at https://www.kaggle.com/nikhilmittal/flight-fare-prediction-mh.
+### Project Analysis:
+In this project I am trying to build a machine learning regression model for predicting Indian Domestic Flight Price. Data set used has 10683 records and 11 features including dependent ‘Price’ feature. I have found sklearn’s ensemble algorithm ‘ExtraTreesRegressor’ is most suited for our problem. On this algorithm we build a model that able to achieve adjusted R2-score of 0.971 on train data and 0.920 on test data. 
+### Summary:
+Since this data set has several features with unstructured format which includes date, time and routes, I pass data through several pre processing and feature engineering steps before feeding into cross checking. There are some missing values and outliers present for some features.
+
+Half of the features are categorical, with several trail-error steps found that using of label-encoding and one-hot encoding on perticular feature enhance performance of model in cross checking step. I use XGBoost, LGBM and several sklearn algorithms to cross check. Among all, found ensemble algorithm ‘ExtraTreesRegressor’ perform better compared to other.
+
+On cross validation in cross checking step ‘ExtraTreesRegressor’ model shows R2-score of 0.906 with standard deviation of 0.022, which is better and tells model is more consistent in prediction compared to others. After hyper parameter tuning of model, model achieved adjusted R2-score of 0.971 and RMSE of 773.34 on train data.
+
+On test set model has
+- Adjusted R2-score(in percentage): 92.04
+- RMSE: 1320.88
+### Files:
+-	‘main.ipynb’: main notebook file where modeling done.
+-	‘Flight_Fare.xlsx’: data set file.
+-	‘Route_labelencoder_ref.csv’: can be used as reference for converting 'Route' categorical values while deploying or external use.
+-	‘etr_model.gzip’: this file used to saved final ExtraTreesRegressor model, can be used while deploying.
+-	'SWEETVIZ_REPORT.html': analysis of data using sweetviz.
