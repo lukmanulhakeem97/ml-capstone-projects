@@ -40,15 +40,8 @@ For modelling, prepared data in two ways; first for sklearn and ANN algorithms r
 I tried modelling with both sklearn and deep learning algorithms. Among sklearn algorithms, Support Vector Classifier performed well have accuracy of 97%. In deep learning CNN with two convolutional layer and single Dense ANN layer of 10 units with 0.25 dropout outperform other models, So selected it as final model. It has 99.28%, 98.93% and 99.09% as train, dev and test accuracy respectively.
 
 On test set model has
-- Accuracy(in percentage)
-   - Train : 99.28%
-   - Validation : 98.93%
-   - Test : 99.09%
-
-- Loss
-   - Train : 0.0205
-   - Validation : 0.0369
-   - Test : 0.0277
+- Accuracy(in percentage):  99.09
+- Loss: 0.0277
 ### Files:
 -	‘main.ipynb’ is the main notebook file where modelling done.
 -	‘model_ann.h5’ saves best trained artificial neural network parameters. 
