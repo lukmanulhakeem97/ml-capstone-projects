@@ -1,68 +1,7 @@
 # ML-capstone-projects
 My machine Learning capstone projects
 
-## Project 1: Bank marketing (Detailed description given [here](bank-marketing/bank_marketing.md))
-
-## Project 2: Handwritten Digits classification
-More on dataset: 'http://yann.lecun.com/exdb/mnist/' 
-### Project Analysis:
-In this project I am trying to build a ML model on a multiclass image classification problem. Model’s objective is to predict which digit is actually written in the given input image sample. Model will try to classify given input image into any of the 10 single digit classes ranging from 0 to 9. I have found that deep learning approach is good for this problem, and more over it is computer vision related Convolutional neural network address best. By using Keras CNN, model got maximum 99.28% and 98.93% accuracy during training and cross validation respectively, for test data model achieved accuracy of 99.09%. Thus hopefully, I build  a good generalized model.
-### Summary:
-I used MNIST Handwritten image dataset. It consists of total 70,000 image instances, 60,000 for training and 10,000 for testing the model. Input is the image pixel intensity measure and output is the class of digit which it belongs. Each instance is a gray scale image of 28x28 pixel size. Dataset is almost balanced, though I applied smote oversampling to make it exactly balanced and to see whether performance increase or not. But I can’t find much difference in performance even after applying smote.
-
-For modelling, prepared data in two ways; first for sklearn and ANN algorithms reshaped each input of 28x28 instances into 784 features, and then for CNN reshaped each input into 28x28x1 and each output into one-hot vectors of 1x10 shape.
-
-I tried modelling with both sklearn and deep learning algorithms. Among sklearn algorithms, Support Vector Classifier performed well have accuracy of 97%. In deep learning CNN with two convolutional layer and single Dense ANN layer of 10 units with 0.25 dropout outperform other models, So selected it as final model. It has 99.28%, 98.93% and 99.09% as train, dev and test accuracy respectively.
-
-On test set model has
-- Accuracy(in percentage):  99.09
-- Loss: 0.0277
-### Files:
--	‘main.ipynb’ is the main notebook file where modelling done.
--	‘model_ann.h5’ saves best trained artificial neural network parameters. 
--	‘model_cnn.h5’ saves best trained convolutional neural network parameters.
-
-
-
-## Project 3: Flight Price Prediction
-Dataset can be available at https://www.kaggle.com/nikhilmittal/flight-fare-prediction-mh.
-### Project Analysis:
-In this project I am trying to build a machine learning regression model for predicting Indian Domestic Flight Price. Data set used has 10683 records and 11 features including dependent ‘Price’ feature. I have found sklearn’s ensemble algorithm ‘ExtraTreesRegressor’ is most suited for our problem. On this algorithm we build a model that able to achieve adjusted R2-score of 0.971 on train data and 0.920 on test data. 
-### Summary:
-Since this data set has several features with unstructured format which includes date, time and routes, I pass data through several pre processing and feature engineering steps before feeding into cross checking. There are some missing values and outliers present for some features.
-
-Half of the features are categorical, with several trail-error steps found that using of label-encoding and one-hot encoding on perticular feature enhance performance of model in cross checking step. I use XGBoost, LGBM and several sklearn algorithms to cross check. Among all, found ensemble algorithm ‘ExtraTreesRegressor’ perform better compared to other.
-
-On cross validation in cross checking step ‘ExtraTreesRegressor’ model shows R2-score of 0.906 with standard deviation of 0.022, which is better and tells model is more consistent in prediction compared to others. After hyper parameter tuning of model, model achieved adjusted R2-score of 0.971 and RMSE of 773.34 on train data.
-
-On test set model has
-- Adjusted R2-score(in percentage): 92.04
-- RMSE: 1320.88
-### Files:
--	‘main.ipynb’: main notebook file where modeling done.
--	‘Flight_Fare.xlsx’: data set file.
--	‘Route_labelencoder_ref.csv’: can be used as reference for converting 'Route' categorical values while deploying or external use.
--	‘etr_model.gzip’: this file used to saved final ExtraTreesRegressor model, can be used while deploying.
--	'SWEETVIZ_REPORT.html': analysis of data using sweetviz.
-
-
-
-## Project 4: Heart Disease Prediction
-Dataset https://www.drivendata.org/competitions/54/machine-learning-with-a-heart/page/107/.
-### Project Analysis:
-In this project I am trying to build a machine learning classification model for predicting whether a patient have heart disease or not. Data set used has 180 records and 14 input features including dependent feature. I have build model for this problem using scikit-learn’s Gaussian Naïve Bayes algorithm. Model has 0.94 recall and 0.83 accuracy scores on test set. This tells that model can classify heart disease patients as correctly, have only 0.06 % misclassification. 
-### Summary:
-Start by doing domain studies and domain analysis. Try for getting insights from data by doing univariate and multivariate analysis. Then check data’s correctness by checking missing values and outlier presence. 
-
-There was was outlier presence in three numerical features. Since three features are skewed we use IQR method to locate the outliers and replace it with median values. Before doing cross check with algorithms,  use ‘SMOTE’ to balance dataset and ‘Standard Scaler’ to scale all feature within similar range.
-
-For cross checking by using cross validation we use scikit-learns classification algorithms. Found Gaussian Naïve Bayes with recall score 0.825 is best suited for our problem. After hyper-parameter tuning, model got 0.812 recall score on training set.
-
-On test dataset model got;
--	 Recall score: 0.94
--	 Accuracy score: 0.83
-### Files:
--	‘main.ipynb’: main notebook file where modeling done.
--	‘description.docx’: contain brief description about Business problem and features in dataset.
--	‘values.csv’: file contains input features and values.
--	‘labels.csv’: file containing output values.
+### Project 1: Bank marketing (Detailed description given [here](bank-marketing/bank_marketing.md))
+### Project 2: Handwritten Digits classification (Detailed description given [here](handwritten-digit/handwritten_digit.md))
+### Project 3: Flight Price Prediction (Detailed description given [here](flight-price/flight_price.md))
+### Project 4: Heart Disease Prediction (Detailed description given [here](heart-disease/heart_disease.md))
