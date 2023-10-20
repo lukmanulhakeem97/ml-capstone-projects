@@ -1,7 +1,7 @@
 # ML-capstone-projects
 My machine Learning capstone projects
 
-## Project 1: Bank marketing (Detailed description given here)[Link to the Directory](/path/to/directory)
+## Project 1: Bank marketing (Detailed description given [here](bank-marketing/bank_marketing.md))
 
 ## Project 2: Handwritten Digits classification
 More on dataset: 'http://yann.lecun.com/exdb/mnist/' 
